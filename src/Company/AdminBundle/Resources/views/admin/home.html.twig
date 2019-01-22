@@ -23,9 +23,17 @@
                     <td>{{ message.mail }}</td>
                     <td>{{ message.datecreation|date('d/m/Y') }}</td>
                     <td>
-                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        <a href="{{ path('company_admin_message_view', {message: message.id}) }}">
+                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                        </a>
                     </td>
-                    <td>{{ message.checked }}</td>
+                    <td>
+                        {% if message.checked == 1  %} 
+                            <span class="glyphicon glyphicon-check" aria-hidden="true"></span>
+                        {% else %}
+                            <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+                        {% endif %}
+                    </td>
                 </tr>   
             {% endfor %}
 
