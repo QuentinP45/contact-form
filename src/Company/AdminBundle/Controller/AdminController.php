@@ -17,4 +17,15 @@ class AdminController extends Controller
             'messages' => $messages
         ]);
     }
+
+    public function viewAction($message)
+    {
+        $em = $this->getDoctrine()->getManager();
+        
+        $message = $em->getRepository(Message::class)->find($message);
+
+        return $this->render('@CompanyAdmin/admin/message.html.twig', [
+            'message' => $message
+        ]);
+    }
 }
