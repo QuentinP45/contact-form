@@ -1,0 +1,10 @@
+{% extends '@CompanyAdmin/layout.html.twig' %}
+
+{% block body %}
+    <p>{{ message.name }}, le {{ message.datecreation|date('d/m/Y') }}</p>
+    <p>{{ message.mail }}</p>
+    <textarea>{{ message.content }}</textarea>
+    
+    {# add contact form template checkbox #}
+
+{% endblock %}
