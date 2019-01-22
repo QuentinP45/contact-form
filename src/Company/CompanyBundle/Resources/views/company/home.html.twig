@@ -5,6 +5,12 @@
         <h1 class="text-center">Bienvenue à la Happy company</h1>
     </div>
 
+    {% for message in app.flashes('info') %}
+        <div class="alert alert-info">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     {{ include('@CompanyCompany/company/form.html.twig') }}
 
 {% endblock %}
