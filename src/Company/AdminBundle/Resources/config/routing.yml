@@ -1,3 +1,9 @@
 company_admin_homepage:
     path:     /admin
     defaults: { _controller: CompanyAdminBundle:Admin:index }
+
+company_admin_message_view:
+    path:     /admin/view/{message}
+    defaults: { _controller: CompanyAdminBundle:Admin:view }
+    requirements:
+        message: '\d+'
