@@ -1,9 +1,6 @@
 {% extends '@CompanyCompany/layout.html.twig' %}
 
 {% block body %}
-    <div class="jumbotron">
-        <h1 class="text-center">Bienvenue à la Happy company</h1>
-    </div>
 
     {% for message in app.flashes('info') %}
         <div class="alert alert-info">
