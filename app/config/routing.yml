@@ -1,3 +1,7 @@
+company_admin:
+    resource: "@CompanyAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 company_company:
     resource: "@CompanyCompanyBundle/Resources/config/routing.yml"
     prefix:   /
