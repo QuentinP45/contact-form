@@ -6,4 +6,31 @@
         <h4>Liste des annonces</h4>
     </div>
 
+    <div>
+        <table class="table table-hover">
+            <thead>
+                <td>Nom</td>
+                <td>Mail</td>
+                <td>Date</td>
+                <td>Détail</td>
+                <td>Statut</td>
+            </thead>
+            <tbody>
+                        
+            {% for message in messages %}
+                <tr>
+                    <td>{{ message.name }}</td>
+                    <td>{{ message.mail }}</td>
+                    <td>{{ message.datecreation|date('d/m/Y') }}</td>
+                    <td>
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                    </td>
+                    <td>{{ message.checked }}</td>
+                </tr>   
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
 {% endblock %}
