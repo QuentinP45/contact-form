@@ -13,6 +13,7 @@ class ContactEditType extends AbstractType
             ->remove('name')
             ->remove('mail')
             ->remove('content')
+            ->add('checked')
         ;
     }
 
