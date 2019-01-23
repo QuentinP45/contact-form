@@ -25,6 +25,11 @@
         {{ form_label(form.checked) }}
         {{ form_errors(form.checked) }}
         {{ form_widget(form.checked) }}
+        <a class="btn btn-default" href="{{ path('company_admin_homepage') }}" role="button">Retour</a>
+        <button class="btn btn-default" type="submit">
+            Valider
+            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+        </button>
         {{ form_end(form) }}
     </div>    
 {% endblock %}
