@@ -6,6 +6,11 @@ company_company:
     resource: "@CompanyCompanyBundle/Resources/config/routing.yml"
     prefix:   /
 
+login:
+    path: /login
+    defaults: { _controller: CompanyAdminBundle:Security:login }
+
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
