@@ -19,13 +19,15 @@
   <body>
     <div class="container">
         <div>
-            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                Connecté en tant que {{ app.user.username }}
-                -
-                <a href="{{ path('logout') }}">Déconnexion</a>
-            {% else %}
-                <a href="{{ path('login') }}">Connexion</a>
-            {% endif %}
+            {% block userbar %}
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    Connecté en tant que {{ app.user.username }}
+                    -
+                    <a href="{{ path('logout') }}">Déconnexion</a>
+                {% else %}
+                    <a href="{{ path('login') }}">Connexion</a>
+                {% endif %}
+            {% endblock %}
         </div>
         <div class="jumbotron text-center">
             <h1>Bienvenue !</h1>
