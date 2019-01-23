@@ -23,6 +23,7 @@ security:
             form_login:
                 login_path: login   
                 check_path: login_check
+                default_target_path: company_admin_homepage
             logout:
                 path: logout
                 target: login
