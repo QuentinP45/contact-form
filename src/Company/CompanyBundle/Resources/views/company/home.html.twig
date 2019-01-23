@@ -1,16 +1,15 @@
 {% extends '@CompanyCompany/layout.html.twig' %}
 
 {% block body %}
-
-    {% for message in app.flashes('info') %}
-        <div class="alert alert-info">
-            {{ message }}
-        </div>
-    {% endfor %}
-
     <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
 
+        {% for message in app.flashes('info') %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+        {% endfor %}
+
         {{ include('@CompanyCompany/company/form.html.twig') }}
-        
+
     </div>
 {% endblock %}
