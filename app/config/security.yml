@@ -18,11 +18,14 @@ security:
             security: false
 
         main:
-            anonymous: ~
+            anonymous: true
             provider: main
             form_login:
                 login_path: login   
                 check_path: login_check
+            logout:
+                path: logout
+                target: login
 
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
